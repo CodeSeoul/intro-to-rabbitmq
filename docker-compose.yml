@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  mq:
+    image: rabbitmq:3-management-alpine
+    # volumes:
+    #   - type: bind
+    #     source: ./config/rabbitmq.config
+    #     target: /etc/rabbitmq/rabbitmq.config
+    ports:
+      - target: 15672
+        published: 8080
+        protocol: tcp
+        mode: host
+  
+  producer:
+    build:
+      context: producer/
+
+  consumer:
+    build:
+      context: consumer/
