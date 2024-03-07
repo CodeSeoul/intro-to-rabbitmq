@@ -1,6 +1,6 @@
 # Intro to RabbitMQ
 
-This repository is meant to be an introduction to RabbitMQ along with the [presentation](https://docs.google.com/presentation/d/19FAKNWsZJB6IqhR0u8ABbEZV3lnliz9mF5zQ9RTCxhY/edit?usp=sharing). **This is not production-ready.** This is purely for demonstrative purposes.
+This repository is meant to be an introduction to [RabbitMQ](https://www.rabbitmq.com/) along with the [presentation](https://docs.google.com/presentation/d/19FAKNWsZJB6IqhR0u8ABbEZV3lnliz9mF5zQ9RTCxhY/edit?usp=sharing). **This is not production-ready.** This is purely for demonstrative purposes.
 
 The main branch starts off with a blank workspace. Via [Docker Compose](https://docs.docker.com/compose/), we set up a single RabbitMQ instance, a producer container, and a consumer container. Currently, the producer and consumer only provide a print message to show they're running. RabbitMQ runs but without any configuration. Note that we're running RabbitMQ with the management plugin, which provides a UI to observe operations.
 
@@ -16,7 +16,7 @@ docker-compose up --build
 ```
 
 ## Checking
-View RabbitMQ management interface on [localhost](http://localhost:8080/). Default login is `guest` / `guest`.
+View RabbitMQ management interface on [localhost:8080](http://localhost:8080/). Default login is `guest` / `guest`.
 
 ## Cleanup
 ```shell
