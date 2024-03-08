@@ -1,4 +1,4 @@
-version: "3.8"
+name: intro-rabbitmq
 
 services:
   mq:
@@ -12,11 +12,24 @@ services:
         published: 8080
         protocol: tcp
         mode: host
+    healthcheck:
+      test: ["CMD", "rabbitmqctl", "status"]
+      interval: 5s
+      timeout: 10s
+      retries: 5
+      start_period: 20s
   
   producer:
     build:
       context: producer/
+    depends_on:
+      mq:
+        condition: service_healthy
 
   consumer:
     build:
       context: consumer/
+    depends_on:
+      mq:
+        condition: service_healthy
+        
