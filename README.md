@@ -12,7 +12,7 @@ The `consumer` branch includes everything in the `mq-config` branch plus a tiny 
 
 ## Running
 ```shell
-docker-compose up --build
+docker compose up --build
 ```
 
 ## Checking
@@ -20,5 +20,5 @@ View RabbitMQ management interface on [localhost:8080](http://localhost:8080/). 
 
 ## Cleanup
 ```shell
-docker-compose down
+docker compose down
 ```
