@@ -1,5 +1,6 @@
 [project]
 name = "intro-rabbitmq-producer"
+version = "0.1.0"
 authors = [
     {name = "Bryan \"Beege\" Berry", email = "beege@codeseoul.org"}
 ]
